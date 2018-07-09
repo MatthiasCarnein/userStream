@@ -1,0 +1,13 @@
+Package: userStream
+Type: Package
+Title: userStream - Customer Segmentation using Stream Clustering
+Version: 1.0.0
+Author: Matthias Carnein
+Maintainer: Matthias Carnein <Matthias.Carnein@uni-muenster.de>
+Description: A stream Clustering algorithm applicable to custoemr segmentation. The algorithm allows to insert new but also update already processed observations.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: Rcpp (>= 0.12.15), lsbclust
+LinkingTo: Rcpp
+RoxygenNote: 6.0.1
