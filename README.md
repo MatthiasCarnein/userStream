@@ -18,13 +18,13 @@ devtools::install_git("https://wiwi-gitlab.uni-muenster.de/m_carn01/userStream")
 
 ## Usage
 
-After loading the library, a new userstream object needs to created. The library makes use of R's Reference Classes which allows to initialize the object using the function `new()`. Using the corresponding parameters, the radius threshold (`r`), decay factor (`lambda`), decay time (`tgap`) and number of macro clusters (`k`) can be configured. In addition 'weighted' determines whether to perform unweighted or weighted reclustering.
+After loading the library, a new userstream object needs to created. The library makes use of R's Reference Classes which allows to initialize the object using the function `new()`. Using the corresponding parameters, the radius threshold (`r`), decay factor (`lambda`), decay time (`tgap`) and number of macro clusters (`k`) can be configured. In addition `weighted` determines whether to perform unweighted or weighted reclustering.
 
 The created object then provides two main methods:
 1. The function `cluster()` allows to cluster an entire data frame in a single run and is the fastes method to calculate the end-result of the stream clustering algorithm.
 2. The function `batch_iterate()` allows to cluster the data frame in batches of fixed size. This allows to produce intermediate results, calculate quality measures and plot the result.
 
-Both methods require 3 main parameters: the usage-related features, the corresponding customer ID as well as the Date of the transaction. 'batch_iterate' further allows to configure the size of the batches, whether to plot and evaluate the intermediate results. In addition, the parameter `prequential` determines whether the quality measures are calculated before or after the insertion of the new points (the former is usually referred to as prequential evaluation or train-then-test evaluation).
+Both methods require 3 main parameters: the usage-related features, the corresponding customer ID as well as the Date of the transaction. `batch_iterate` further allows to configure the size of the batches, whether to plot and evaluate the intermediate results. In addition, the parameter `prequential` determines whether the quality measures are calculated before or after the insertion of the new points (the former is usually referred to as prequential evaluation or train-then-test evaluation).
 
 Therefore the main usage scenario is as follows:
 ```R
